@@ -1,0 +1,33 @@
+REM --- VERSION 2.0
+
+10 PRINT "TANDYBOARD V2.0"
+20 X = 1
+30 N$ = INKEY$
+40 IF N$=":" THEN X=X+1
+50 REM --- after variable initialization, this statement checks 
+60 REM --- keyboard input and increases the duration variable accordingly
+70 IF N$="-" AND X>1 THEN X=X-1
+80 REM --- after variable initialization, this statement checks
+90 REM --- keyboard input and decreases the duration variable accordingly
+100 IF N$="A" THEN SOUND 1,X
+110 PRINT "NOTE VAL: 1"
+120 IF N$="S" THEN SOUND 25,X
+130 PRINT "NOTE VAL: 25"
+140 IF N$="D" THEN SOUND 50,X
+150 PRINT "NOTE VAL: 50"
+160 IF N$="F" THEN SOUND 75,X
+170 PRINT "NOTE VAL: 75"
+180 IF N$="G" THEN SOUND 100,X
+190 PRINT "NOTE VAL: 100"
+200 IF N$="H" THEN SOUND 125,X
+210 PRINT "NOTE VAL: 125"
+220 IF N$="J" THEN SOUND 150,X
+230 PRINT "NOTE VAL: 150"
+240 IF N$="K" THEN SOUND 175,X
+250 PRINT "NOTE VAL: 175"
+260 IF N$="L" THEN SOUND 200,X
+270 PRINT "NOTE VAL: 200"
+280 IF N$=";" THEN SOUND 225,X
+290 PRINT "NOTE VAL: 225"
+300 GOTO 30
+310 REM --- loop program back to second variable initialization
